@@ -7,8 +7,11 @@ export default {
     redirectUri: 'http://localhost:8080/implicit/callback',
     scopes: ['openid', 'profile', 'email'],
     testing: {
-      disableHttpsCheck: `${OKTA_TESTING_DISABLEHTTPSCHECK}`
-    }
+		disableHttpsCheck: false
+    },
+	tokenManager:{
+		autoRenew: true
+	}
   },
   resourceServer: {
     messagesUrl: 'http://localhost:8000/api/messages',
